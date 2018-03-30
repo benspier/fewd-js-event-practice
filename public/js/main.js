@@ -11,5 +11,8 @@
     element.target.innerText="you clicked me";
   });
 
+  button[2].addEventListener("click", function(element) {
+    button[1].innerText="button two";
+  });
 
 })();
