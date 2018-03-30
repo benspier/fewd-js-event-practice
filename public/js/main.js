@@ -7,7 +7,9 @@
     element.target.classList.toggle("button-danger")
   });
 
-  
+  button[1].addEventListener("click", function(element) {
+    element.target.innerText="you clicked me";
+  });
 
 
 })();
