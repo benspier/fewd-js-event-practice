@@ -1,10 +1,13 @@
 (function () {
 
   // your js goes here
-  const button = document.querySelector("button");
+  const button = document.querySelectorAll("button");
 
-  button.addEventListener("click", function(element) {
+  button[0].addEventListener("click", function(element) {
     element.target.classList.toggle("button-danger")
   });
+
+  
+
 
 })();
