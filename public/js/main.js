@@ -1,21 +1,25 @@
+//iife
 (function () {
 
-  // your js goes here
-  const button = document.querySelectorAll("button");
+//selectors
+  const buttonRow = document.querySelector('.row');
+  const buttons = document.querySelectorAll('button');
 
-  for (let i=0; i < button.length; i++) {
-      button[i].addEventListener("click", function(event) {
-        if (i == 0) {
-          event.target.classList.toggle("button-danger");
-        }
-        else if (i == 1) {
-          event.target.innerText="you clicked me";
-        }
-        else if (i == 2) {
-          button[1].innerText="button two";
-        }
-      });
+//method
+  function buttonAction(event) {
+    if (event.target === buttons[0]) {
+      buttons[0].classList.toggle('button-danger');
+    }
+    else if (event.target === buttons[1]) {
+      buttons[1].innerText='you clicked me';
+    }
+    else if (event.target === buttons[2]) {
+      buttons[1].innerText='button two';
     };
+  };
+
+//event
+  buttonRow.addEventListener('click', buttonAction);
 
 })();
 
